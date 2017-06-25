@@ -1588,9 +1588,7 @@ a.btn-purchase:hover, a.btn-purchase:focus{
 
 /*clients*/
 
-.clients {
-    margin-top: 15px;
-}
+
 
 .clients ul li {
     display: inline-block;
