@@ -51,18 +51,6 @@ p {line-height: 22px}
     border: none;
 }
 
-.navbar-brand {
-    color: #bcc0cd;
-    font-size: 35px;
-    font-weight: 100;
-    line-height: 30px;
-    margin-top: 30px;
-    padding: 0 0 0 15px;
-}
-
-.navbar-brand span{
-    color: #f25f5b;
-}
 
 .header-frontend .navbar-collapse  ul.navbar-nav {
     float: right;
@@ -1791,11 +1779,53 @@ ul#filters > .active > span {
     margin-top: 50px;
 }
 
-
 .PPL_Subtitle{
     position: relative;
     top: 10px;
     left: 35px;
     color: #f25f5b;
     font-style:italic;
+}
+
+.navbar-brand {
+  padding-top: 25px;
+}
+
+.navbar-brand h1 { /* Restaurant name */
+  color: #f25f5b;
+  font-size: 1.8em;
+  font-style:italic;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .9;
+}
+
+.navbar-brand span{
+    color: #f25f5b;
+    font-size:0.9em;
+    font-style:italic;
+}
+
+
+.navbar-brand p{
+    margin-top: 6px;
+}
+
+#logo-img {
+    background: url('../img/companylog.png') no-repeat;
+    width: 200px;
+    height: 100px;
+    margin: 14px 5px 5px 0;
+  }
+
+
+  /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+  /* Header */
+  .navbar-brand h1 { /* Restaurant name */
+    font-size: 1.5em;
+  }
+  /* End Header */
+  
 }

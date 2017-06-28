@@ -35,30 +35,38 @@
   <body>
      <!--header start-->
     <header class="header-frontend">
-        <div class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand PPL_H1" href="index.html" style="font-style:italic; color: #f25f5b;">苏州益发特科技有限公司</a>
-                    <p class="PPL_Subtitle">
-                        -----专业IT服务和业务解决方案提供商
-                    </p>
+      <nav id="header-nav" class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="pull-left visible-md visible-lg">
+                    <div id="logo-img"></div>
+                </a>
+
+                <div class="navbar-brand">
+                    <a href="index.html"><h1>苏州益发特科技有限公司</h1></a>
+                        <p>
+                            <span>----专业IT服务和业务解决方案提供商</span>
+                        </p>
                 </div>
-                <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">首页</a></li>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="collapsable-nav" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">首页</a></li>
                         <li><a href="about.html">关于我们</a></li>
                         <li><a href="services.html">解决方案</a></li>
                         <li><a href="jobs.html">招贤纳士</a></li>
-                        <li class="active"><a href="contact.html">联系我们</a></li>
-                    </ul>
-                </div>
+                        <li><a href="contact.html">联系我们</a></li>
+
+                </ul>
             </div>
-        </div>
+        </div><!-- .container -->
+      </nav><!-- #header-nav -->
     </header>
     <!--header end-->
 
