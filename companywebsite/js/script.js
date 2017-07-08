@@ -23,8 +23,9 @@
 
 var dc = {};
 
-var homeHtml = "snippets/home-snippet.html";
 var jsHtml = "snippets/js.html";
+var js_library = "snippets/js_library.html";
+var homeHtml = "snippets/home-snippet.html";
 var aboutHtml = "snippets/about-snippet.html";
 var contactHtml = "snippets/contact-snippet.html";
 var jobsHtml = "snippets/jobs-snippet.html";
@@ -63,7 +64,7 @@ $ajaxUtils.sendGetRequest(
   function (responseText) {
     document.querySelector("#main-content").innerHTML = responseText;
     $ajaxUtils.sendGetRequest(
-      jsHtml,
+      js_library,
       function(responsejsText){     
           $('#js').html(responsejsText);
           console.log("hello");
