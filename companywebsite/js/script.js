@@ -24,7 +24,6 @@
 var dc = {};
 
 var jsHtml = "snippets/js.html";
-var js_library_min = "snippets/js_library_min.html";
 var homeHtml = "snippets/home-snippet.html";
 var aboutHtml = "snippets/about-snippet.html";
 var contactHtml = "snippets/contact-snippet.html";
