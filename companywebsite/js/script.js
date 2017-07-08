@@ -65,8 +65,7 @@ $ajaxUtils.sendGetRequest(
     document.querySelector("#main-content").innerHTML = responseText;
     $ajaxUtils.sendGetRequest(
       js_library_min,
-      function(responsejsText){ 
-          console.log("hello");    
+      function(responsejsText){     
           $('#js').html(responsejsText);
         },
       false);      
