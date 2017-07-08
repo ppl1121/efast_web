@@ -62,8 +62,8 @@ showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   homeHtml,
   function (responseText) {
-    //document.querySelector("#main-content").innerHTML = responseText;
-    $('#main-content').html(responseText);
+    document.querySelector("#main-content").innerHTML = responseText;
+    //$('#main-content').html(responseText);
     $ajaxUtils.sendGetRequest(
       js_library_min,
       function(responsejsText){ 
