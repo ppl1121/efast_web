@@ -67,7 +67,8 @@ $ajaxUtils.sendGetRequest(
       js_library_min,
       function(responsejsText){     
           $('#js').html(responsejsText);
-          console.log("hello");
+          // console.log("hello");
+          alert("hello");
         },
       false);      
   },
