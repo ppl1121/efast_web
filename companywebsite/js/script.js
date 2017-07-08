@@ -62,14 +62,8 @@ showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   homeHtml,
   function (responseText) {
-    document.querySelector("#main-content").innerHTML = responseText;
-    $ajaxUtils.sendGetRequest(
-      js_library_min,
-      function(responsejsText){     
-          $('#js').html(responsejsText);
-          console.log("hello");
-        },
-      false);      
+    //document.querySelector("#main-content").innerHTML = responseText;
+    $('#main-content').html(responseText);    
   },
   false);
 });
