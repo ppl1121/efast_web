@@ -63,16 +63,29 @@ $ajaxUtils.sendGetRequest(
   homeHtml,
   function (responseText) {
     document.querySelector("#main-content").innerHTML = responseText;
-    $ajaxUtils.sendGetRequest(
-      js_library_min,
-      function(responsejsText){     
-          $('#js').html(responsejsText);
-          // console.log("hello");
-          alert("hello");
-        },
-      false);      
+    // $ajaxUtils.sendGetRequest(
+    //   js_library_min,
+    //   function(responsejsText){     
+    //       $('#js').html(responsejsText);
+    //       // console.log("hello");
+    //       alert("hello");
+    //     },
+    //   false); 
+    //
+    $.ajax({
+    type: "GET",
+    url: js_library_min,
+    dataType: "html",
+    success:  function(data){
+                $('#js').html(data);
+                alert("newhello");
+              }
+    });        
   },
   false);
+
+
+
 });
 
 
