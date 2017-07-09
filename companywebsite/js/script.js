@@ -1,30 +1,5 @@
-// $(function () { // Same as document.addEventListener("DOMContentLoaded"...
-
-//   // Same as document.querySelector("#navbarToggle").addEventListener("blur",...
-//   $("#navbarToggle").blur(function (event) {
-//     var screenWidth = window.innerWidth;
-//     if (screenWidth < 768) {
-//       $("#collapsable-nav").collapse('hide');
-//     }
-//   });
-
-//   // In Firefox and Safari, the click event doesn't retain the focus
-//   // on the clicked button. Therefore, the blur event will not fire on
-//   // user clicking somewhere else in the page and the blur event handler
-//   // which is set up above will not be called.
-//   // Refer to issue #28 in the repo.
-//   // Solution: force focus on the element that the click event fired on
-//   $("#navbarToggle").click(function (event) {
-//     $(event.target).focus();
-//   });
-// });
-
 (function (global) {
 
-var dc = {};
-
-var jsHtml = "snippets/js.html";
-var js_library_min = "snippets/js_library_min.html";
 var homeHtml = "snippets/home-snippet.html";
 var aboutHtml = "snippets/about-snippet.html";
 var contactHtml = "snippets/contact-snippet.html";
@@ -57,87 +32,92 @@ var switchMenuToActive = function () {
 // On page load (before images or CSS)
 document.addEventListener("DOMContentLoaded", function (event) {
 
-// On first load, show home view
-// showLoading("#main-content");
-// $ajaxUtils.sendGetRequest(
-//   homeHtml,
-//   function (responseText) {
-//     //document.querySelector("#main-content").innerHTML = responseText;
-//     $('#main-content').html(responseText);
+    //On first load, show home view
+    showLoading("#main-content");
+    $.ajax({
+              type: "GET",
+              url: homeHtml,
+              dataType: "html",
+              success: function(responseText){
+                          document.querySelector("#main-content")
+                          .innerHTML = responseText;
+                       }
+            });
 
-//     if(window.screen.width>1200){
-//         $ajaxUtils.sendGetRequest(
-//           js_library_min,
-//           function(responsejsText){
-//             $('#js').html(responsejsText);
-//           },
-//         false);
-//     }
-      
-//   },
-//   false);
-  if(window.screen.width>1200){
-    $ajaxUtils.sendGetRequest(
-    js_library_min,
-    function(responsejsText){
-      $('#js').html(responsejsText);
-    },
-    false);
-  } 
-});
-
-
-
-dc.loadMenuCategories = function (menu_items) {
-  showLoading("#main-content");
-  var screenWidth = window.innerWidth;
+    $("#collapsable-nav a").click(function(){
+        var ele= $(this);
+        showLoading("#main-content");
+        var screenWidth = window.innerWidth;
         if (screenWidth < 768) {
             $("#collapsable-nav").collapse('hide');
-        } 
-  if(menu_items === "about"){
-    $ajaxUtils.sendGetRequest(
-      aboutHtml,
-      function (responseText) {
-        switchMenuToActive();        
-        document.querySelector("#main-content")
-        .innerHTML = responseText; 
-      },
-      false);
-  }
-  else if(menu_items === "contact"){
-    $ajaxUtils.sendGetRequest(
-      contactHtml,
-      function (responseText) {
-        switchMenuToActive();
-        document.querySelector("#main-content")
-        .innerHTML = responseText;   
-      },
-      false);
-  }
-  else if(menu_items === "jobs"){
-    $ajaxUtils.sendGetRequest(
-      jobsHtml,
-      function (responseText) {
-        switchMenuToActive(); 
-        document.querySelector("#main-content")
-        .innerHTML = responseText;   
-      },
-      false);
-  }
-  else{
+        }
+        if($(this).parent().attr("id") === "navAboutButton"){
+            $.ajax({
+              type: "GET",
+              url: aboutHtml,
+              dataType: "html",
+              success: function(responseText){
+                          document.querySelector("#main-content")
+                          .innerHTML = responseText;
+                           $("#collapsable-nav li.active").removeClass("active");
+                           ele.parent().addClass("active");
+                       }
+            });
+        }
+        else if($(this).parent().attr("id") === "navServicesButton"){
 
-    $ajaxUtils.sendGetRequest(
-      servicesHtml,
-      function (responseText) {
-        switchMenuToActive();
-        document.querySelector("#main-content")
-        .innerHTML = responseText;   
-      },
-      false);
-  }
-};
-
-
-global.$dc = dc;
+            $.ajax({
+              type: "GET",
+              url: servicesHtml,
+              dataType: "html",
+              success: function(responseText){
+                          document.querySelector("#main-content")
+                          .innerHTML = responseText;
+                           $("#collapsable-nav li.active").removeClass("active");
+                           ele.parent().addClass("active");
+                       }
+            });
+        }
+        else if($(this).parent().attr("id") === "navJobsButton"){
+            $.ajax({
+              type: "GET",
+              url: jobsHtml,
+              dataType: "html",
+              success: function(responseText){
+                          document.querySelector("#main-content")
+                          .innerHTML = responseText;
+                           $("#collapsable-nav li.active").removeClass("active");
+                           ele.parent().addClass("active");
+                       }
+            });
+        }
+        else if($(this).parent().attr("id") === "navHomeButton"){
+            $.ajax({
+              type: "GET",
+              url: homeHtml,
+              dataType: "html",
+              success: function(responseText){
+                          document.querySelector("#main-content")
+                          .innerHTML = responseText;
+                           $("#collapsable-nav li.active").removeClass("active");
+                           ele.parent().addClass("active");
+                       }
+            });
+        }
+        else{
+            $.ajax({
+              type: "GET",
+              url: contactHtml,
+              dataType: "html",
+              success: function(responseText){
+                          document.querySelector("#main-content")
+                          .innerHTML = responseText;
+                           $("#collapsable-nav li.active").removeClass("active");
+                           ele.parent().addClass("active");
+                       }
+            });
+        }
+    })
+});
 
 })(window);

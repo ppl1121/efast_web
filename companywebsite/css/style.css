@@ -66,37 +66,14 @@ p {line-height: 22px}
     font-weight: 300;
     background: none;
 }
-.copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
-.header-frontend .nav li a:hover,
-.header-frontend .nav li a:focus,
-.header-frontend .nav li.active a,
-.header-frontend .nav li.active a:hover,
-.header-frontend .nav li a.dropdown-toggle:hover,
-.header-frontend .nav li a.dropdown-toggle:focus,
-.header-frontend .nav li.active ul.dropdown-menu li a:hover,
-.header-frontend .nav li.active ul.dropdown-menu li.active a{
-    color: #fff ;
-    background-color: #f77b6f;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-}
 
-
-.header-frontend .navbar-default .navbar-nav > .open > a,
-.header-frontend .navbar-default .navbar-nav > .open > a:hover,
-.header-frontend .navbar-default .navbar-nav > .open > a:focus {
+.header-frontend .navbar-default .navbar-nav a:focus,
+.header-frontend .navbar-default .navbar-nav a:hover,
+.header-frontend .navbar-default .navbar-nav li.active a
+ {
     color: #fff;
     background-color: #f77b6f;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
 }
-
 
 .header-frontend .navbar {
     min-height: 100px;
