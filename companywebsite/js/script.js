@@ -54,26 +54,26 @@ var switchMenuToActive = function () {
   document.querySelector("#navHomeButton").className = classes;
 };
 
-// On page load (before images or CSS)
-document.addEventListener("DOMContentLoaded", function (event) {
+// // On page load (before images or CSS)
+// document.addEventListener("DOMContentLoaded", function (event) {
 
-// On first load, show home view
-showLoading("#main-content");
-$ajaxUtils.sendGetRequest(
-  homeHtml,
-  function (responseText) {
-    document.querySelector("#main-content").innerHTML = responseText;
-    //$('#main-content').html(responseText);
-    $ajaxUtils.sendGetRequest(
-      js_library_min,
-      function(responsejsText){
-          //console.log("hello"); 
-          $('#js').html(responsejsText);
-        },
-      false);      
-  },
-  false);
-});
+// // On first load, show home view
+// showLoading("#main-content");
+// $ajaxUtils.sendGetRequest(
+//   homeHtml,
+//   function (responseText) {
+//     document.querySelector("#main-content").innerHTML = responseText;
+//     //$('#main-content').html(responseText);
+//     $ajaxUtils.sendGetRequest(
+//       js_library_min,
+//       function(responsejsText){
+//           //console.log("hello"); 
+//           $('#js').html(responsejsText);
+//         },
+//       false);      
+//   },
+//   false);
+// });
 
 
 
