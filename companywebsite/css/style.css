@@ -1,8 +1,4 @@
 
-/* Import fonts */
-/*@import url(https://ffonts.lug.ustc.edu.cn/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);*/
-@import url(https://fonts.lug.ustc.edu.cn/css?family=Fjalla+One);
-
 body {
     color: #797979;
     font-family: 'Open Sans', sans-serif;
@@ -191,7 +187,6 @@ p {line-height: 22px}
     font-weight: 300;
     text-transform: uppercase;
     margin-top: 0;
-    font-family: 'Fjalla One', sans-serif;
 }
 
 .feature-head p{
@@ -255,7 +250,6 @@ p {line-height: 22px}
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 400;
-    font-family: 'Fjalla One', sans-serif;
 }
 
 .f-text {
@@ -285,7 +279,6 @@ p {line-height: 22px}
     font-size: 20px;
     margin: 0 0 5px 0;
     text-transform: uppercase;
-    font-family: 'Fjalla One', sans-serif;
 }
 .quote-info p {
     color: #9eb3c4;
@@ -299,7 +292,6 @@ p {line-height: 22px}
     font-size: 20px;
     font-weight: 400;
     text-transform: uppercase;
-    font-family: 'Fjalla One', sans-serif;
 }
 
 .accordion {
@@ -753,7 +745,6 @@ ul.about-flex-slides {
     font-size: 24px;
     font-weight: 400;
     margin-bottom: 20px;
-    font-family: 'Fjalla One', sans-serif;
 }
 
 .bx-wrapper {
@@ -918,7 +909,6 @@ ul.about-flex-slides {
     font-weight: 600;
     margin: 3px 0 0;
     text-transform: uppercase;
-    font-family: 'Fjalla One', sans-serif;
 }
 
 /*contact*/
@@ -936,7 +926,6 @@ ul.about-flex-slides {
     color: #475168;
     text-transform: uppercase;
     margin-bottom: 20px;
-    font-family: 'Fjalla One', sans-serif;
 }
 
 /*about us*/
@@ -993,7 +982,6 @@ ul.about-flex-slides {
 .about h3 {
     /*text-transform: uppercase;*/
     color: #475168;
-    font-family: 'Fjalla One', sans-serif;
     margin-top: 0;
 }
 
@@ -1022,7 +1010,6 @@ ul.about-flex-slides {
     margin-top: 0;
     color: #475168;
     font-size: 20px;
-    font-family: 'Fjalla One', sans-serif;
 }
 
 .media h3 {
@@ -1083,7 +1070,6 @@ ul.about-flex-slides {
     margin-bottom: 25px;
     color: #47506a;
     font-size: 20px;
-    font-family: 'Fjalla One', sans-serif;
 }
 
 /*team*/
@@ -1234,7 +1220,6 @@ ul.about-flex-slides {
     font-size:25px;
     color: #F77B6F;
     font-weight: 300;
-    font-family: 'Fjalla One', sans-serif;
 }
 
 .blog-item h1 {
@@ -1267,7 +1252,6 @@ ul.about-flex-slides {
     margin-top: 30px;
     color: #475268;
     font-size: 18px;
-    font-family: 'Fjalla One', sans-serif;
 }
 
 .blog-side-item ul li {
@@ -1328,7 +1312,6 @@ ul.tag li a {
     font-weight: 400;
     margin-top: 0;
     margin-bottom: 20px;
-    font-family: 'Fjalla One', sans-serif;
 }
 
 
@@ -1431,7 +1414,6 @@ ul.tag li a {
     color:#F77B6F;
     text-transform: uppercase;
     font-size:35px;
-    font-family: 'Fjalla One', sans-serif;
 }
 
 .slide_subtitle {
@@ -1545,7 +1527,6 @@ ul.tag li a {
     color: #475168;
     font-size: 24px;
     text-transform: uppercase;
-    font-family: 'Fjalla One',sans-serif;
     font-weight: 400;
     margin-bottom: 30px;
 }
