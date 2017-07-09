@@ -58,22 +58,32 @@ var switchMenuToActive = function () {
 document.addEventListener("DOMContentLoaded", function (event) {
 
 // On first load, show home view
-showLoading("#main-content");
-$ajaxUtils.sendGetRequest(
-  homeHtml,
-  function (responseText) {
-    //document.querySelector("#main-content").innerHTML = responseText;
-    $('#main-content').html(responseText);
-    if(window.screen.width>1200){
-       $ajaxUtils.sendGetRequest(
-          js_library_min,
-          function(responsejsText){
-            $('#js').html(responsejsText);
-          },
-      false);
-    } 
-  },
-  false);
+// showLoading("#main-content");
+// $ajaxUtils.sendGetRequest(
+//   homeHtml,
+//   function (responseText) {
+//     //document.querySelector("#main-content").innerHTML = responseText;
+//     $('#main-content').html(responseText);
+
+//     if(window.screen.width>1200){
+//         $ajaxUtils.sendGetRequest(
+//           js_library_min,
+//           function(responsejsText){
+//             $('#js').html(responsejsText);
+//           },
+//         false);
+//     }
+      
+//   },
+//   false);
+  if(window.screen.width>1200){
+    $ajaxUtils.sendGetRequest(
+    js_library_min,
+    function(responsejsText){
+      $('#js').html(responsejsText);
+    },
+    false);
+  } 
 });
 
 
